@@ -23,3 +23,4 @@
         </div>
     </body>
 </html>
+<link rel="stylesheet" href="{{ URL::asset('css/app.css') }}" />
