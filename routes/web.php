@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix'=>'','as'=>'navable.'], function () {
+Route::group(['prefix'=>'','as'=>env('NAVABLEPREFIX')], function () {
     Route::get('/', function () {
         return view('pages.index');
     }) -> name('Home');

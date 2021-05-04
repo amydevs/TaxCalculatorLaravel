@@ -1,8 +1,12 @@
 <nav class="navbar">
     <ul class="nav">
         @foreach (Route::getRoutes() as $route)
-            @if (strpos($route->getName(), 'navable.') === 0)
-                <li><a href="{{route($route->getName())}}" class="{{ Route::currentRouteNamed($route->getName()) ? 'active' : '' }}">Home</a></li>
+            @if (strpos($route->getName(), env('NAVABLEPREFIX')) === 0)
+                <li>
+                    <a href="{{route($route->getName())}}" class="{{ Route::currentRouteNamed($route->getName()) ? 'active' : '' }}">
+                        {{ str_replace(env('NAVABLEPREFIX'), "", $route->getName()) }}
+                    </a>
+                </li>
             @endif
         @endforeach
     </ul>
