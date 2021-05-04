@@ -7,7 +7,7 @@
         <div class="container">
 
             <header class="row">
-                @include('includes.header')
+                @include('includes.header', ['breadCrumb' => ""])
             </header>
 
             <div id="main" class="row">

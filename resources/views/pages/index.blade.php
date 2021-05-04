@@ -1,4 +1,3 @@
-@extends('layouts.default')
+@extends('layouts.default', ["breadCrumb" => "Home"])
 @section('content')
-    i am the home page
 @stop

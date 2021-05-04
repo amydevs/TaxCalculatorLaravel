@@ -1,1 +1,1 @@
-<div id="copyright text-right">© Copyright 2013 Scotchy Scotch Scotch</div>
+<div id="footer">© Copyright 2021 AyanAmy</div>
