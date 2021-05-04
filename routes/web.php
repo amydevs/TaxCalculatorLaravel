@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
+Route::group(['prefix'=>'','as'=>'navable.'], function () {
+    Route::get('/', function () {
+        return view('pages.index');
+    }) -> name('Home');
 });
+

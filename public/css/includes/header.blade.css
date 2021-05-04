@@ -1,22 +1,21 @@
-ul {
+.navbar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
 }
-li {
+.navbar ul li {
   float: left;
 }
-li a {
+.navbar ul li a {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
+.navbar ul li a:hover {
+  background-color: rgba(1, 1, 1, 0.8);
 }
 
