@@ -5,23 +5,20 @@
             @yield('head')
         </head>
         <body>
-        <div class="container">
+            <div class="mainContainer">
+                <header class="row">
+                    @include('includes.header')
+                </header>
 
-            <header class="row">
-                @include('includes.header')
-            </header>
+                <div id="main" class="row">
 
-            <div id="main" class="row">
+                    @yield('content')
 
-                @yield('content')
-
+                </div>
             </div>
-
             <footer class="row">
                 @include('includes.footer')
             </footer>
-
-        </div>
-    </body>
+        </body>
 </html>
 <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}" />
