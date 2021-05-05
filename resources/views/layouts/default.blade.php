@@ -2,17 +2,18 @@
     <html>
         <head>
             @include('includes.head')
+            @yield('head')
         </head>
         <body>
         <div class="container">
 
             <header class="row">
-                @include('includes.header', ['breadCrumb' => ""])
+                @include('includes.header')
             </header>
 
             <div id="main" class="row">
 
-                    @yield('content')
+                @yield('content')
 
             </div>
 

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix'=>'','as'=>env('NAVABLEPREFIX')], function () {
-    Route::get('/', function () {
+Route::group(['prefix'=>'','as'=>env('NAVABLEPREFIX'), ], function () {
+    Route::any('', function () {
         return view('pages.index');
     }) -> name('Home');
 });
-

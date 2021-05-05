@@ -13,4 +13,9 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .less('resources/css/app.less', 'public/css')
+
+    // Pages Here
+    .less('resources/css/pages/index.blade.less', 'public/css/pages')
+
+    // Includes Here
     .less('resources/css/includes/header.blade.less', 'public/css/includes')
