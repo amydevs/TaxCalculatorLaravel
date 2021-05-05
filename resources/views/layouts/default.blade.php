@@ -3,6 +3,7 @@
         <head>
             @include('includes.head')
             @yield('head')
+            <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}" />
         </head>
         <body>
             <div class="mainContainer">
@@ -21,4 +22,3 @@
             </footer>
         </body>
 </html>
-<link rel="stylesheet" href="{{ URL::asset('css/app.css') }}" />
