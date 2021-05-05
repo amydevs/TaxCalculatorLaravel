@@ -1,28 +1,19 @@
 <?php
-$input = 180000;
-$taxToBePaid = 0;
+// Gets Page
+$page = file_get_contents('https://www.ato.gov.au/rates/individual-income-tax-rates/');
 
-$brackets = [
-    createTaxArray(0, 0.19, 18201),
-    createTaxArray(5092, 0.325, 45001),
-    createTaxArray(29467, 0.37, 120001),
-    createTaxArray(51667, 0.45, 180001)
-];
-$thresholds = array_column($brackets, 'minThreshold');
-array_multisort($thresholds, SORT_DESC, $brackets);
+// Shortens Page
+$exp = '/(<Div class="widgetBody"><span class="accesspoint"><\/span><h1>).*?(<\/div>)/is';
+preg_match($exp, mb_convert_encoding($page, 'HTML-ENTITIES', "UTF-8"), $matches);
+$shortenedPage = $matches[0];
+$shortenedPage = (str_replace('id="Residents"'," ", $shortenedPage));
+$shortenedPage = (str_replace('id="Children"'," ", $shortenedPage));
+$shortenedPage = (str_replace('id="Calculators"'," ", $shortenedPage));
+
+$dom = new DOMDocument();
+//methods to load HTML
+$dom->loadHTML($shortenedPage);
+$documentElement = $dom->documentElement;
+echo $documentElement;
 
 
-foreach ($brackets as $key => $value) {
-    if ($taxToBePaid == 0){
-        $differenceOfBracketandInput = $input-($value["minThreshold"]-1);
-        if ($differenceOfBracketandInput > 0){
-            echo json_encode($value);
-            $taxToBePaid = ($differenceOfBracketandInput * $value["perDollarTax"]) + $value["baseTax"];
-        }
-    }
-}
-echo $taxToBePaid;
-
-function createTaxArray($baseTax, $perDollarTax, $minThreshold) {
-    return array("baseTax"=>$baseTax, "perDollarTax"=>$perDollarTax, "minThreshold"=>$minThreshold);
-}
