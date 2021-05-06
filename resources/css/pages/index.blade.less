@@ -6,9 +6,9 @@
 .mainIndexContent {
     justify-self: center;
     align-self: center;
-    background: rgba(1, 1, 1, 0.1);
+    background: var(--widgetBackground);
     padding: 10px;
-    border-radius: 5px;
+    border-radius: var(--universalBorderRadius);
 }
 form {
     display: grid;
@@ -18,16 +18,16 @@ form {
     padding: 10px;
     column-gap: 10px;
     row-gap: 10px;
-    border-radius: 5px;
-    background: rgba(1, 1, 1, 0.1);
+    border-radius: var(--universalBorderRadius);
+    background: var(--widgetBackground);
     label {
         width: max-content;
     }
     button {
-        background: rgba(1, 1, 1, 0.1);
+        background: var(--widgetBackground);
         border: none;
         padding: 5px;
-        border-radius: 5px;
+        border-radius: var(--universalBorderRadius);
         &:hover {
             cursor: pointer;
         }
