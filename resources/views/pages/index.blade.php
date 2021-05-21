@@ -58,9 +58,16 @@
         .mainIndexContent {
             justify-self: center;
             align-self: center;
-            background: rgba(255, 255, 255, 1);
+            background-color: var(--widgetBackground, #fff);
+            box-shadow: var(--widgetBoxShadows);
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
             padding: 10px;
             border-radius: var(--universalBorderRadius);
+        }
+        .mainIndexContent table {
+            width: 100%;
         }
         form {
             display: grid;
