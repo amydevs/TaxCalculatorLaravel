@@ -67,8 +67,8 @@
             display: flex;
             flex-direction: column;
             box-sizing: border-box;
-            min-width: 60vh;
-            min-height: 60vh;
+            min-width: 40%;
+            min-height: 70%;
             padding: 10px;
             border-radius: var(--universalBorderRadius);
             gap: 10px;
@@ -92,6 +92,7 @@
             row-gap: 10px;
             border-radius: var(--universalBorderRadius);
             background: var(--layerWidgetBackground);
+            box-shadow: var(--widgetBoxShadows);
         }
         form label {
             width: -webkit-max-content;
@@ -103,6 +104,7 @@
             border: none;
             padding: 5px;
             border-radius: var(--universalBorderRadius);
+            box-shadow: var(--widgetBoxShadows);
         }
         form button:hover {
             cursor: pointer;
