@@ -12,4 +12,25 @@
     </ul>
 </nav>
 
-<link rel="stylesheet" href="{{ URL::asset('css/includes/header.blade.css') }}" />
+<style>
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+    .navbar ul li {
+        float: left;
+    }
+    .navbar ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    .navbar ul li a:hover {
+        background-color: rgba(1, 1, 1, 0.8);
+    }
+</style>
