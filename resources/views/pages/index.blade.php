@@ -48,7 +48,9 @@
         #main {
             height: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
@@ -56,8 +58,6 @@
             background-image: url("{{ URL::asset('assets/index/calculator_large.jpg') }}");
         }
         .mainIndexContent {
-            justify-self: center;
-            align-self: center;
             background-color: var(--widgetBackground, #fff);
             box-shadow: var(--widgetBoxShadows);
             display: flex;
