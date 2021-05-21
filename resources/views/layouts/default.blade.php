@@ -12,11 +12,12 @@
                 </header>
 
                 <div id="main" class="row">
-
                     @yield('content')
-
                 </div>
             </div>
+
+            @yield('furtherContent')
+
             <footer class="row">
                 @include('includes.footer')
             </footer>

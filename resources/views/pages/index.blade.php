@@ -2,15 +2,14 @@
 
 @section('content')
     <div class="mainIndexContent">
-        <div class="tableContainer">
-            <table class="taxTable">
-                <thead>
+        <table class="taxTable">
+            <thead>
                 <tr>
                     <th>Header 1</th>
                     <th>Header 2</th>
                 </tr>
-                </thead>
-                <tbody>
+            </thead>
+            <tbody>
                 <tr>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -35,10 +34,15 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
-                <tbody>
-            </table>
-        </div>
+            </tbody>
+        </table>
         @include('includes.index.form')
+    </div>
+@stop
+
+@section('furtherContent')
+    <div id="furtherInfo">
+
     </div>
 @stop
 
@@ -46,7 +50,7 @@
 @section('head')
     <style>
         #main {
-            height: 100%;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -63,11 +67,19 @@
             display: flex;
             flex-direction: column;
             box-sizing: border-box;
+            min-width: 60vh;
+            min-height: 60vh;
             padding: 10px;
             border-radius: var(--universalBorderRadius);
+            gap: 10px;
         }
-        .mainIndexContent table {
+        .taxTable {
+            flex: 1;
             width: 100%;
+        }
+        .mainIndexContent :is(table, th, td) {
+            border: 1px solid black;
+            border-collapse: collapse;
         }
         form {
             display: grid;
@@ -94,6 +106,12 @@
         }
         form button:hover {
             cursor: pointer;
+        }
+    </style>
+
+    <style>
+        #furtherInfo {
+            height: 100vh;
         }
     </style>
 @stop
