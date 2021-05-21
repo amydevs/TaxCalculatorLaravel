@@ -49,11 +49,16 @@
             height: 100%;
             display: flex;
             justify-content: center;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("{{ URL::asset('assets/index/calculator_large.jpg') }}");
         }
         .mainIndexContent {
             justify-self: center;
             align-self: center;
-            background: var(--widgetBackground);
+            background: rgba(255, 255, 255, 1);
             padding: 10px;
             border-radius: var(--universalBorderRadius);
         }
@@ -67,7 +72,7 @@
                 column-gap: 10px;
             row-gap: 10px;
             border-radius: var(--universalBorderRadius);
-            background: var(--widgetBackground);
+            background: var(--layerWidgetBackground);
         }
         form label {
             width: -webkit-max-content;
@@ -75,7 +80,7 @@
             width: max-content;
         }
         form button {
-            background: var(--widgetBackground);
+            background: var(--layerWidgetBackground);
             border: none;
             padding: 5px;
             border-radius: var(--universalBorderRadius);

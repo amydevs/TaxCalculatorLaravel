@@ -18,7 +18,7 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: #333;
+        background-color: #212121;
     }
     .navbar ul li {
         float: left;
