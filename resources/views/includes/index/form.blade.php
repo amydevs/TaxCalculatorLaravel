@@ -11,14 +11,6 @@
         <button style="grid-column: 1 / span 2;" type="submit" form="calcform" value="submit">Submit</button>
     </form>
 </div>
-@php
-    $taxableIncome = request()->get("taxableIncome");
-    if (Str::length($taxableIncome) != 0) {
-        include("php/calculator.php");
-        $calculatorObject = new Calculator();
-        echo $calculatorObject->calculate($taxableIncome);
-    }
-@endphp
 
 <style>
     #calcform * {

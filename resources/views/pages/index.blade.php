@@ -1,44 +1,48 @@
 @extends('layouts.default')
 
+@php
+    include("php/calculator.php");
+    $calculatorObject = new Calculator();
+    $brackets = [
+        $calculatorObject->createTaxArray(0, 0, 1),
+        $calculatorObject->createTaxArray(0, 0.19, 18201),
+        $calculatorObject->createTaxArray(5092, 0.325, 45001),
+        $calculatorObject->createTaxArray(29467, 0.37, 120001),
+        $calculatorObject->createTaxArray(51667, 0.45, 180001)
+    ]
+@endphp
+
 @section('content')
     <div class="mainIndexContent">
         <div class="tableContainer">
             <table class="taxTable">
                 <thead>
                     <tr>
-                        <th>Header 1</th>
-                        <th>Header 2</th>
+                        <th>Income Thresholds</th>
+                        <th>Base Tax</th>
+                        <th>Rate</th>
+                        <th>Tax Payable on This Income</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
+                    @foreach ($brackets as $key=>$bracket)
+                        <tr>
+                            <td>${{ $bracket["minThreshold"] }} {{ array_key_exists($key+1, $brackets) ? "to $".($brackets[$key+1]["minThreshold"] - 1) : "and Over" }}</td>
+                            <td>${{ $bracket["baseTax"] }}</td>
+                            <td>{{ $bracket["perDollarTax"] * 100 }}%</td>
+                            <td>${{ $bracket["baseTax"] }} plus ${{ $bracket["perDollarTax"] }} for each $1 over ${{ $bracket["minThreshold"] - 1 }}</td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
         @include('includes.index.form')
+        @php
+            $taxableIncome = request()->get("taxableIncome");
+            if (Str::length($taxableIncome) != 0) {
+                echo $calculatorObject->calculate($taxableIncome, $brackets);
+            }
+        @endphp
     </div>
 @stop
 
@@ -76,6 +80,7 @@
             padding: 10px;
             border-radius: var(--universalBorderRadius);
             gap: 10px;
+            margin: 5px;
         }
         .tableContainer {
             flex: 1;
@@ -85,12 +90,15 @@
             overflow: hidden;
             border: 2px solid var(--textColour);
             box-shadow: var(--widgetBoxShadows);
+            font-size: var(--specifiedFontSize);
         }
         .tableContainer :is(table, th, td) {
             flex: 1;
             border-collapse: collapse;
             border-radius: var(--universalBorderRadius);
             border: 1px solid var(--textColour);
+            text-align: center;
+            padding: 4px;
         }
     </style>
 
