@@ -3,7 +3,7 @@
 
     --widgetBoxShadows: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 1px 3px 0px rgba(0,0,0,.12);
 
-    --widgetBackground: #fff;
+    --defaultBackground: #fff;
     --layerWidgetBackground: rgba(1, 1, 1, 0.05);
     --textColour: #333;
     --hoverColour: rgba(0, 0, 0, 0.8);
@@ -17,7 +17,7 @@ body, input, button {
     font-feature-settings: "kern","liga";
     -webkit-font-smoothing: antialiased;
     color: var(--textColour);
-    background: var(--widgetBackground);
+    background: var(--defaultBackground);
 }
 
 body {

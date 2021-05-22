@@ -14,6 +14,7 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
     #scroll2Top {
         display: none;
         position: fixed;

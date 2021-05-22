@@ -64,7 +64,7 @@
             background-image: url("{{ URL::asset('assets/index/calculator_large.jpg') }}");
         }
         .mainIndexContent {
-            background-color: var(--widgetBackground, #fff);
+            background-color: var(--defaultBackground, #fff);
             box-shadow: var(--widgetBoxShadows);
             display: flex;
             flex-direction: column;
@@ -95,7 +95,7 @@
     <style>
         #furtherContent {
             height: 100vh;
-            background: var(--widgetBackground);
+            background: var(--defaultBackground);
         }
     </style>
 @stop

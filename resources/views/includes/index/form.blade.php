@@ -45,6 +45,6 @@
     #calcform button:hover {
         cursor: pointer;
         background-color: var(--hoverColour);
-        color: var(--widgetBackground);
+        color: var(--defaultBackground);
     }
 </style>
