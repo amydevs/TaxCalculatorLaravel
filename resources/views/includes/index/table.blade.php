@@ -26,18 +26,20 @@
         flex: 1;
         display: flex;
         border-radius: var(--universalBorderRadius);
-            -moz-border-radius: var(--universalBorderRadius);
         overflow: hidden;
         border: 2px solid var(--textColour);
         box-shadow: var(--widgetBoxShadows);
         font-size: var(--specifiedFontSize);
     }
     .tableContainer :is(table, th, td) {
-        flex: 1;
-        border-collapse: collapse;
-        border-radius: var(--universalBorderRadius);
         border: 1px solid var(--textColour);
         text-align: center;
         padding: 4px;
+    }
+    .tableContainer table {
+        flex: 1;
+        height: 100%;
+        border-radius: var(--universalBorderRadius);
+        border-collapse: collapse;
     }
 </style>
