@@ -1,14 +1,34 @@
 :root {
     --universalBorderRadius: 4px;
+
     --widgetBackground: #fff;
-    --layerlayerWidgetBackground: rgba(1, 1, 1, 0.1);
+    --layerWidgetBackground: rgba(1, 1, 1, 0.05);
+    --widgetBoxShadows: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 1px 3px 0px rgba(0,0,0,.12);
 }
 
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    font-family: "Roboto";
+    letter-spacing: normal;
+    font-feature-settings: "kern","liga";
+    -webkit-font-smoothing: antialiased;
+    color: #333
 }
+
+button {
+    font-family: "Roboto";
+    font-weight: 300;
+}
+
+input {
+    border-radius: var(--universalBorderRadius);
+    border: 0;
+}
+input:focus {
+    border-radius: var(--universalBorderRadius);
+    outline: none;
+}
+
 .mainContainer {
     height: 100vh;
     display: flex;

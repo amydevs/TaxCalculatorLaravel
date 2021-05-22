@@ -2,40 +2,42 @@
 
 @section('content')
     <div class="mainIndexContent">
-        <table class="taxTable">
-            <thead>
-                <tr>
-                    <th>Header 1</th>
-                    <th>Header 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="tableContainer">
+            <table class="taxTable">
+                <thead>
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         @include('includes.index.form')
     </div>
 @stop
@@ -73,41 +75,20 @@
             border-radius: var(--universalBorderRadius);
             gap: 10px;
         }
-        .taxTable {
+        .tableContainer {
             flex: 1;
-            width: 100%;
+            display: flex;
+            border-radius: var(--universalBorderRadius);
+                -moz-border-radius: var(--universalBorderRadius);
+            overflow: hidden;
+            border: 2px solid var(--textColour);
+            box-shadow: var(--widgetBoxShadows);
         }
-        .mainIndexContent :is(table, th, td) {
-            border: 1px solid black;
+        .tableContainer :is(table, th, td) {
+            flex: 1;
             border-collapse: collapse;
-        }
-        form {
-            display: grid;
-            grid-template-columns: auto auto;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
-            -moz-column-gap: 10px;
-                column-gap: 10px;
-            row-gap: 10px;
             border-radius: var(--universalBorderRadius);
-            background: var(--layerWidgetBackground);
-            box-shadow: var(--widgetBoxShadows);
-        }
-        form label {
-            width: -webkit-max-content;
-            width: -moz-max-content;
-            width: max-content;
-        }
-        form button {
-            background: var(--layerWidgetBackground);
-            border: none;
-            padding: 5px;
-            border-radius: var(--universalBorderRadius);
-            box-shadow: var(--widgetBoxShadows);
-        }
-        form button:hover {
-            cursor: pointer;
+            border: 1px solid var(--textColour);
         }
     </style>
 
