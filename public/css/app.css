@@ -11,8 +11,7 @@
     --easeTransition: all 0.5s ease;
 }
 
-body {
-    margin: 0;
+body * {
     font-family: "Roboto";
     letter-spacing: normal;
     font-feature-settings: "kern","liga";
@@ -20,15 +19,20 @@ body {
     color: var(--textColour);
 }
 
+body {
+    margin: 0;
+}
+
 button {
     font-family: "Roboto";
     font-weight: 300;
-    color: var(--textColour);
 }
 
 input {
     border-radius: var(--universalBorderRadius);
     border: 0;
+    padding: 5px;
+    font-weight: 300;
 }
 input:focus {
     border-radius: var(--universalBorderRadius);
