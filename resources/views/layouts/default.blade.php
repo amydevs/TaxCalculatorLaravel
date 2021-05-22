@@ -11,7 +11,7 @@
                     @include('includes.header')
                 </header>
 
-                <div id="main" class="row">
+                <div id="main" class="row repeatable">
                     @yield('content')
                 </div>
             </div>

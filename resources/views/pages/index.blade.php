@@ -43,7 +43,7 @@
 @stop
 
 @section('furtherContent')
-    <div id="furtherContent">
+    <div id="furtherContent" class="repeatable">
 
     </div>
 @stop
@@ -51,7 +51,7 @@
 
 @section('head')
     <style>
-        #main {
+        .repeatable {
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -61,6 +61,8 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+        }
+        #main {
             background-image: url("{{ URL::asset('assets/index/calculator_large.jpg') }}");
         }
         .mainIndexContent {
@@ -94,8 +96,7 @@
 
     <style>
         #furtherContent {
-            height: 100vh;
-            background: var(--defaultBackground);
+            background-image: url("{{ URL::asset('assets/index/graphing_calc_large.jpg') }}");
         }
     </style>
 @stop
