@@ -1,16 +1,27 @@
 @extends('layouts.default')
 
 @php
+    // Defaults:
+    $defaultBracket = "Residents";
+    $bracketQueryKey = "bracket";
+
+    //Set stuff here:
     include("php/calculator.php");
 
     $taxableIncome = request()->get("taxableIncome");
 
+
+
+    $selectedBracket = request()->input($bracketQueryKey);
+    if (Str::length($selectedBracket) == 0) { $selectedBracket = $defaultBracket; }
+
     $calculatorObject = new Calculator();
-    $brackets = $calculatorObject->allBrackets['Residents']
+    $brackets = $calculatorObject->allBrackets[$selectedBracket];
 @endphp
 
 @section('content')
     <div class="mainIndexContent">
+        @include('includes.index.formnav')
         @include('includes.index.table',  ['taxBrackets' => $brackets])
         @include('includes.index.form')
         @if (Str::length($taxableIncome) != 0)
@@ -58,6 +69,8 @@
             border-radius: var(--universalBorderRadius);
             gap: 10px;
             margin: 5px;
+            margin-top: 0;
+            overflow: hidden;
         }
     </style>
 

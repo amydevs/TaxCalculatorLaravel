@@ -1,13 +1,7 @@
 <div class="calculatorFormDiv">
-    <form method="POST" action="{{ url()->current() }}/" id="calcform">
+    <form method="POST" action="{{ Request::getRequestUri() }}" id="calcform">
         @csrf
-        <input style="grid-column: 1 / span 2;" type="text" id="taxableIncome" name="taxableIncome" placeholder="Taxable Income" value='{{ request()->get("taxableIncome") != 0 ? request()->get("taxableIncome") : "" }}'>
-        <label>Resident Type: </label>
-        <span>
-            <input type="radio" id="male" name="residentType" value="resident"><label>Resident</label><br>
-            <input type="radio" id="male" name="residentType" value="foreignResident"><label>Foreign Resident</label>
-        </span>
-
+        <input style="grid-column: 1 / span 2;" type="text" id="taxableIncome" name="taxableIncome" placeholder="Taxable Income" value='{{ request()->get("taxableIncome") }}'>
         <button style="grid-column: 1 / span 2;" type="submit" form="calcform" value="submit">Submit</button>
     </form>
 </div>
