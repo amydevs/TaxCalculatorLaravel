@@ -11,7 +11,12 @@
         <button style="grid-column: 1 / span 2;" type="submit" form="calcform" value="submit">Submit</button>
     </form>
 </div>
-{{ request()->get("taxableIncome") }}
+@php
+    include("php/calculator.php");
+    $taxableIncome = request()->get("taxableIncome");
+    $calculatorObject = new Calculator();
+    echo $calculatorObject->calculate($taxableIncome);
+@endphp
 
 <style>
     #calcform * {

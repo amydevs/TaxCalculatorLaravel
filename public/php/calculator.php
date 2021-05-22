@@ -21,7 +21,7 @@ class Calculator {
             if ($taxToBePaid == 0){
                 $differenceOfBracketandInput = $input-($value["minThreshold"]-1);
                 if ($differenceOfBracketandInput > 0){
-                    echo json_encode($value);
+                    // echo json_encode($value);
                     $taxToBePaid = ($differenceOfBracketandInput * $value["perDollarTax"]) + $value["baseTax"];
                 }
             }
