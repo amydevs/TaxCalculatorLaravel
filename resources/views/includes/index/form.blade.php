@@ -12,10 +12,12 @@
     </form>
 </div>
 @php
-    include("php/calculator.php");
     $taxableIncome = request()->get("taxableIncome");
-    $calculatorObject = new Calculator();
-    echo $calculatorObject->calculate($taxableIncome);
+    if (Str::length($taxableIncome) != 0) {
+        include("php/calculator.php");
+        $calculatorObject = new Calculator();
+        echo $calculatorObject->calculate($taxableIncome);
+    }
 @endphp
 
 <style>
