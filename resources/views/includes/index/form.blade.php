@@ -14,6 +14,9 @@
 {{ request()->get("taxableIncome") }}
 
 <style>
+    #calcform * {
+        transition: var(--easeTransition);
+    }
     #calcform {
         display: grid;
         grid-template-columns: auto auto;
@@ -41,5 +44,7 @@
     }
     #calcform button:hover {
         cursor: pointer;
+        background-color: var(--hoverColour);
+        color: var(--widgetBackground);
     }
 </style>

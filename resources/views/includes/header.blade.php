@@ -29,9 +29,9 @@
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
-        transition: all 0.5s ease;
+        transition: var(--easeTransition);
     }
     .navbar ul li a:hover {
-        background-color: rgba(1, 1, 1, 0.8);
+        background-color: var(--hoverColour);
     }
 </style>
