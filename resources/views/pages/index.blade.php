@@ -6,13 +6,7 @@
     $taxableIncome = request()->get("taxableIncome");
 
     $calculatorObject = new Calculator();
-    $brackets = [
-        $calculatorObject->createTaxArray(0, 0, 1),
-        $calculatorObject->createTaxArray(0, 0.19, 18201),
-        $calculatorObject->createTaxArray(5092, 0.325, 45001),
-        $calculatorObject->createTaxArray(29467, 0.37, 120001),
-        $calculatorObject->createTaxArray(51667, 0.45, 180001)
-    ]
+    $brackets = $calculatorObject->allBrackets['Residents']
 @endphp
 
 @section('content')
