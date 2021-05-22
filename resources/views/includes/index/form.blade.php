@@ -45,5 +45,12 @@
         cursor: pointer;
         background-color: var(--hoverColour);
         color: var(--defaultBackground);
+        box-shadow: var(--widgetHoverBoxShadows);
+    }
+    #taxableIncome {
+        box-shadow: var(--widgetBoxShadows);
+    }
+    #taxableIncome:focus {
+        box-shadow: var(--widgetHoverBoxShadows);
     }
 </style>

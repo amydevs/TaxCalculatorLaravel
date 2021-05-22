@@ -46,7 +46,7 @@
 <script>
     // Initialize button
     scrollButton = document.getElementById("scroll2Top");
-    var defaultState = scrollButton.style.transform = "translateX(10vh) rotate(100deg)";
+    var defaultState = scrollButton.style.transform = "translateX(6vh) rotate(90deg)";
     scrollButton.style.display = "flex";
 
     document.addEventListener('scroll', (e) => {
