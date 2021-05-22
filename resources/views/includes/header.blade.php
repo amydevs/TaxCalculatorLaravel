@@ -34,4 +34,8 @@
     .navbar ul li a:hover {
         background-color: var(--hoverColour);
     }
+    .navbar .active {
+        color: var(--textColour);
+        background-color: var(--widgetBackground);
+    }
 </style>
