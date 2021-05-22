@@ -1,16 +1,26 @@
 <?php
 class Calculator {
+    public $allBrackets;
+
+    function __construct() {
+        $this->allBrackets = [
+            "Residents" => [
+                $this->createTaxArray(0, 0, 1),
+                $this->createTaxArray(0, 0.19, 18201),
+                $this->createTaxArray(5092, 0.325, 45001),
+                $this->createTaxArray(29467, 0.37, 120001),
+                $this->createTaxArray(51667, 0.45, 180001)
+            ],
+            "Foreign Residents" => [
+                $this->createTaxArray(0, 0.325, 1),
+                $this->createTaxArray(39000, 0.37, 120001),
+                $this->createTaxArray(61200, 0.45, 180001),
+            ]
+        ];
+    }
+
     function calculate($input, $brackets) {
-
-
         $taxToBePaid = 0;
-
-        // $brackets = [
-        //     $this->createTaxArray(0, 0.19, 18201),
-        //     $this->createTaxArray(5092, 0.325, 45001),
-        //     $this->createTaxArray(29467, 0.37, 120001),
-        //     $this->createTaxArray(51667, 0.45, 180001)
-        // ];
         $thresholds = array_column($brackets, 'minThreshold');
         array_multisort($thresholds, SORT_DESC, $brackets);
 
