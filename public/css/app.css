@@ -39,7 +39,6 @@ html {
 }
 .scrollSnapStart {
     scroll-snap-align: start;
-    scroll-padding: 40px;
 }
 .scrollSnapCenter {
     scroll-snap-align: center;
