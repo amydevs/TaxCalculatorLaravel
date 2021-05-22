@@ -32,10 +32,11 @@
         transition: var(--easeTransition);
     }
     .navbar ul li a:hover {
-        background-color: var(--hoverColour);
+        background-color: rgba(1, 1, 1, 0.8);
+        color: white;
     }
     .navbar .active {
-        color: var(--textColour);
-        background-color: var(--widgetBackground);
+        background: white;
+        color: black;
     }
 </style>
