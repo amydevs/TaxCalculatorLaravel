@@ -18,25 +18,25 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: #212121;
+        background-color: var(--navBackgroundColour);
     }
     .navbar ul li {
         float: left;
     }
     .navbar ul li a {
         display: block;
-        color: white;
+        color: var(--navColour);
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
         transition: var(--easeTransition);
     }
     .navbar ul li a:hover {
-        background-color: rgba(1, 1, 1, 0.8);
-        color: white;
+        background-color: var(--navHoverColour);
+        color: var(--navColour);
     }
     .navbar .active {
-        background: white;
-        color: black;
+        background: var(--navColour);
+        color: var(--navBackgroundColour);
     }
 </style>

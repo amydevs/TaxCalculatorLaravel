@@ -1,5 +1,9 @@
 <div id="footer"><span>© Copyright 2021 AyanAmy</span></div>
-<button onclick="javascript:document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" id="scroll2Top" title="Go to top">^</button>
+<button onclick="javascript:document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" id="scroll2Top" title="Go to top">
+    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+    </svg>
+</button>
 
 <style>
     #footer {
@@ -22,8 +26,8 @@
         right: 0;
         z-index: 99;
         border: none;
-        background-color: black;
-        color: white;
+        background-color: var(--navHoverColour);
+        color: var(--navColour);
         width: 6vh;
         height: 6vh;
         cursor: pointer;
@@ -34,16 +38,15 @@
         transition: var(--easeTransition);
     }
 
-    #myBtn:hover {
-        background-color: #555; /* Add a dark-grey background on hover */
+    #scroll2Top:hover {
+        background-color: var(--navBackgroundColour); /* Add a dark-grey background on hover */
     }
 </style>
 
 <script>
     // Initialize button
     scrollButton = document.getElementById("scroll2Top");
-    var defaultState = "translateX(10vh) rotate(100deg)"
-    scrollButton.style.transform = defaultState;
+    var defaultState = scrollButton.style.transform = "translateX(10vh) rotate(100deg)";
     scrollButton.style.display = "flex";
 
     document.addEventListener('scroll', (e) => {
