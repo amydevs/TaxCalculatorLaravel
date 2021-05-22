@@ -29,6 +29,7 @@
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+        transition: all 0.5s ease;
     }
     .navbar ul li a:hover {
         background-color: rgba(1, 1, 1, 0.8);
