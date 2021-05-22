@@ -31,8 +31,21 @@
     }
 }
 
+/* scrolling stuff */
 html {
     scroll-behavior: smooth;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y proximity;
+}
+.scrollSnapStart {
+    scroll-snap-align: start;
+    scroll-padding: 40px;
+}
+.scrollSnapCenter {
+    scroll-snap-align: center;
+}
+.scrollSnapEnd {
+    scroll-snap-align: center;
 }
 
 body, input, button {

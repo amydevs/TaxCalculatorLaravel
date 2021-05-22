@@ -6,7 +6,7 @@
             <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}" />
         </head>
         <body>
-            <div class="mainContainer">
+            <div class="mainContainer scrollSnapStart">
                 <header class="row">
                     @include('includes.header')
                 </header>
@@ -18,7 +18,7 @@
 
             @yield('furtherContent')
 
-            <footer class="row">
+            <footer class="row scrollSnapEnd">
                 @include('includes.footer')
             </footer>
         </body>
