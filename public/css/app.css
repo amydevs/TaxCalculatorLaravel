@@ -1,22 +1,23 @@
 :root {
     --universalBorderRadius: 4px;
 
-    --widgetBackground: #fff;
-    --layerWidgetBackground: rgba(1, 1, 1, 0.05);
     --widgetBoxShadows: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 1px 3px 0px rgba(0,0,0,.12);
 
+    --widgetBackground: #fff;
+    --layerWidgetBackground: rgba(1, 1, 1, 0.05);
     --textColour: #333;
-    --hoverColour: rgba(1, 1, 1, 0.8);
+    --hoverColour: rgba(0, 0, 0, 0.8);
 
     --easeTransition: all 0.5s ease;
 }
 
-body * {
+body, input, button {
     font-family: "Roboto";
     letter-spacing: normal;
     font-feature-settings: "kern","liga";
     -webkit-font-smoothing: antialiased;
     color: var(--textColour);
+    background: var(--widgetBackground);
 }
 
 body {
