@@ -28,8 +28,8 @@
         border: none;
         background-color: var(--navHoverColour);
         color: var(--navColour);
-        width: 6vh;
-        height: 6vh;
+        width: 5.5vh;
+        height: 5.5vh;
         cursor: pointer;
         justify-content: center;
         align-items: center;
