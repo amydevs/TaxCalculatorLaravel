@@ -43,7 +43,7 @@
 @stop
 
 @section('furtherContent')
-    <div id="furtherInfo">
+    <div id="furtherContent">
 
     </div>
 @stop
@@ -93,8 +93,9 @@
     </style>
 
     <style>
-        #furtherInfo {
+        #furtherContent {
             height: 100vh;
+            background: var(--widgetBackground);
         }
     </style>
 @stop
