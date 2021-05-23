@@ -39,7 +39,8 @@
     }
 
     #scroll2Top:hover {
-        background-color: var(--navBackgroundColour); /* Add a dark-grey background on hover */
+        background-color: var(--navBackgroundColour);
+        box-shadow: var(--widgetHoverBoxShadows);
     }
 </style>
 
