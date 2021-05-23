@@ -77,6 +77,7 @@
     <style>
         #furtherContent {
             background-image: url("{{ URL::asset('assets/index/graphing_calc_large.jpg') }}");
+            background-attachment: var(--dynamicallyFixedBackgroundAttatchment);
         }
     </style>
 @stop
