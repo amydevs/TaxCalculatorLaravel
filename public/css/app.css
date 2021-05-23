@@ -47,6 +47,7 @@ html {
     scroll-snap-align: center;
 }
 
+/* standardizes fonts and inputs */
 body, input, button {
     font-family: "Roboto";
     letter-spacing: normal;
@@ -76,9 +77,18 @@ input:focus {
     outline: none;
 }
 
+/* standardizes heights for containers */
 .mainContainer {
-    height: 100vh;
     display: flex;
     flex-flow: column;
+    align-items: stretch;
+    justify-items: stretch;
 }
+.mainContainer #main {
+    flex: 1;
+}
+.repeatableHeight {
+    height: 100vh;
+}
+
 

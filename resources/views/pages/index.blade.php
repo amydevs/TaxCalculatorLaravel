@@ -36,15 +36,15 @@
             onclick="javascript:document.body.scrollTop = 0; document.documentElement.scrollTop = 0;">
         <svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="currentColor" d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" /></svg></div>
     </div>
-    <div id="furtherContent" class="repeatable">
+    <div id="furtherContent" class="repeatableHeight repeatableContent">
     </div>
 @stop
 
 
 @section('head')
     <style>
-        .repeatable {
-            height: 100vh;
+        /* set the style of the repeated content */
+        .repeatableContent {
             display: flex;
             flex-direction: column;
             justify-content: center;

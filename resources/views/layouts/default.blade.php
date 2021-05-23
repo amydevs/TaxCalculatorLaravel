@@ -6,12 +6,12 @@
             <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}" />
         </head>
         <body>
-            <div class="mainContainer scrollSnapStart">
+            <div class="mainContainer scrollSnapStart repeatableHeight">
                 <header class="row">
                     @include('includes.header')
                 </header>
 
-                <div id="main" class="row repeatable">
+                <div id="main" class="row repeatableContent">
                     @yield('content')
                 </div>
             </div>

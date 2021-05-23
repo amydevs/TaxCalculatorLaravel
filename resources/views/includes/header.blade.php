@@ -34,6 +34,7 @@
     .navbar ul li a:hover {
         background-color: var(--navHoverColour);
         color: var(--navColour);
+        box-shadow: var(--widgetHoverBoxShadows);
     }
     .navbar .active {
         background: var(--navColour);
