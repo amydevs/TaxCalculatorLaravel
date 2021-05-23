@@ -4,7 +4,7 @@
             <li>
                 <a
                     class="{{ $key == $selectedBracket ? "active" : "" }}"
-                    href="{{route(Route::current()->getName())}}{{ $key == $defaultBracket ? "" : "/?".$bracketQueryKey."=".$key }}"
+                    href="{{ $key == $defaultBracket ? url()->current() : request()->fullUrlWithQuery([$bracketQueryKey => $key]) }}"
                 >
                     {{ $key }}
                 </a>
