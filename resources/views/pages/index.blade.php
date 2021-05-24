@@ -58,19 +58,8 @@
             background-image: url("{{ URL::asset('assets/index/calculator_large.jpg') }}");
         }
         .mainIndexContent {
-            background-color: var(--defaultBackground, #fff);
-            box-shadow: var(--widgetBoxShadows);
-            display: flex;
-            flex-direction: column;
-            box-sizing: border-box;
             min-width: 40%;
             min-height: 70%;
-            padding: 10px;
-            border-radius: var(--universalBorderRadius);
-            gap: 10px;
-            margin: 5px;
-            margin-top: 0;
-            overflow: hidden;
         }
     </style>
 

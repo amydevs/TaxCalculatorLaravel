@@ -100,4 +100,18 @@ input:focus {
     height: 100vh;
 }
 
+/* universal styling */
+.mainIndexContent {
+    background-color: var(--defaultBackground, #fff);
+    box-shadow: var(--widgetBoxShadows);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: var(--universalBorderRadius);
+    gap: 10px;
+    margin: 5px;
+    overflow: hidden;
+}
+
 
