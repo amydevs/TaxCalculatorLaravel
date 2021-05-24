@@ -69,6 +69,7 @@
             border-radius: var(--universalBorderRadius);
             gap: 10px;
             margin: 5px;
+            transform: translateY(0); /* this is for fixing an old webkit bug */
             overflow: hidden;
         }
     </style>
