@@ -24,24 +24,21 @@
 <style>
     .tableContainer {
         flex: 1;
-        display: flex;
         border-radius: var(--universalBorderRadius);
         overflow: hidden;
-        border: 2px solid var(--textColour);
+        border: 4px solid var(--textColour);
         box-shadow: var(--widgetBoxShadows);
         font-size: var(--specifiedFontSize);
-        justify-items: stretch;
-        align-items: stretch;
-        align-content: stretch;
-        justify-content: stretch;
     }
     .tableContainer > table, th, td {
         border: 1px solid var(--textColour);
         text-align: center;
-        padding: 4px;
+        padding: 6px;
     }
     .tableContainer table {
-
+        height: 100%;
+        width: 100%;
+        transform: scaleX(1.007) scaleY(1.007);
         border-radius: var(--universalBorderRadius);
         border-collapse: collapse;
     }
