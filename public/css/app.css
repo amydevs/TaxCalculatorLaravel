@@ -97,7 +97,7 @@ input:focus {
     flex: 1;
 }
 .repeatableHeight {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* universal styling */
