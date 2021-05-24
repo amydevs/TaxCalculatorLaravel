@@ -110,7 +110,7 @@ input:focus {
     padding: 10px;
     border-radius: var(--universalBorderRadius);
     gap: 10px;
-    margin: 5px;
+    margin: 10px;
     overflow: hidden;
 }
 
