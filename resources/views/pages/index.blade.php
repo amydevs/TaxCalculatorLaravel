@@ -69,7 +69,6 @@
             border-radius: var(--universalBorderRadius);
             gap: 10px;
             margin: 5px;
-            margin-top: 0;
             overflow: hidden;
         }
     </style>
