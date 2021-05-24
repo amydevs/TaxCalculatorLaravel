@@ -1,3 +1,5 @@
+@import url('../assets/fonts/fontinit.css');
+
 :root {
     /* sets the border radius for everything */
     --universalBorderRadius: 4px;
