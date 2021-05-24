@@ -30,15 +30,18 @@
         border: 2px solid var(--textColour);
         box-shadow: var(--widgetBoxShadows);
         font-size: var(--specifiedFontSize);
+        justify-items: stretch;
+        align-items: stretch;
+        align-content: stretch;
+        justify-content: stretch;
     }
-    .tableContainer :is(table, th, td) {
+    .tableContainer > table, th, td {
         border: 1px solid var(--textColour);
         text-align: center;
         padding: 4px;
     }
     .tableContainer table {
-        flex: 1;
-        height: 100%;
+
         border-radius: var(--universalBorderRadius);
         border-collapse: collapse;
     }
