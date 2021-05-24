@@ -7,16 +7,10 @@
 
 <style>
     #footer {
-        background: linear-gradient(to right, #f857a6, #ff5858);
+        background: var(--navBackgroundColour);
+        color: var(--navColour);
         height: 20vh;
         display: flex;
-    }
-    #footer body {
-        background: linear-gradient(#02AAB0, #00CDAC);
-        background-clip: border-box;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
 
     #scroll2Top {
