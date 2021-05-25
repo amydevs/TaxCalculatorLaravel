@@ -18,10 +18,13 @@ Route::group(['prefix'=>'','as'=>env('NAVABLEPREFIX'), ], function () {
     Route::any('', function () {
         return view('pages.index');
     }) -> name('Home');
-    Route::any('about', function () {
+    Route::get('about', function () {
         return view('pages.about');
     }) -> name('About');
-    Route::any('contact', function () {
+    Route::get('contact', function () {
         return view('pages.contact');
     }) -> name('Contact');
+    Route::get('legal', function () {
+        return view('pages.legal');
+    }) -> name('Legal');
 });

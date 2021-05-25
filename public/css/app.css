@@ -40,6 +40,10 @@
     }
 }
 
+body {
+    margin: 0;
+}
+
 /* scrolling stuff */
 html {
     scroll-behavior: smooth;
@@ -57,7 +61,7 @@ html {
 }
 
 /* standardizes fonts and inputs */
-body, input, button {
+body, input, button, textarea {
     font-family: "Roboto";
     letter-spacing: normal;
     font-feature-settings: "kern","liga";
@@ -66,23 +70,23 @@ body, input, button {
     background: var(--defaultBackground);
 }
 
-body {
-    margin: 0;
+button, textarea, input {
+    font-weight: 300;
 }
 
-button {
-    font-family: "Roboto";
-    font-weight: 300;
+textarea {
+    border-radius: var(--universalBorderRadius);
+    overflow: hidden;
+    border: none;
+    font-size: small;
 }
 
 input {
     border-radius: var(--universalBorderRadius);
     border: 0;
     padding: 5px;
-    font-weight: 300;
 }
 input:focus {
-    border-radius: var(--universalBorderRadius);
     outline: none;
 }
 
@@ -97,7 +101,21 @@ input:focus {
     flex: 1;
 }
 .repeatableHeight {
-    height: 100vh;
+    min-height: 100vh;
+}
+
+/* universal styling */
+.mainIndexContent {
+    background-color: var(--defaultBackground, #fff);
+    box-shadow: var(--widgetBoxShadows);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: var(--universalBorderRadius);
+    gap: 10px;
+    margin: 10px;
+    overflow: hidden;
 }
 
 

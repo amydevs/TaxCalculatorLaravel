@@ -1,7 +1,7 @@
 <div class="calculatorFormDiv">
     <form method="POST" action="{{ Request::getRequestUri() }}" id="calcform">
         @csrf
-        <input style="grid-column: 1 / span 2;" type="text" id="taxableIncome" name="taxableIncome" placeholder="Taxable Income" value='{{ request()->get("taxableIncome") }}'>
+        <input style="grid-column: 1 / span 2;" type="text" id="taxableIncome" name="taxableIncome" placeholder="Taxable Income" value='{{ request()->get("taxableIncome") }}' required>
         <button style="grid-column: 1 / span 2;" type="submit" form="calcform" value="submit">Submit</button>
     </form>
 </div>
@@ -41,10 +41,10 @@
         color: var(--defaultBackground);
         box-shadow: var(--widgetHoverBoxShadows);
     }
-    #taxableIncome {
+    input[type=text] {
         box-shadow: var(--widgetBoxShadows);
     }
-    #taxableIncome:focus {
+    input[type=text]:focus {
         box-shadow: var(--widgetHoverBoxShadows);
     }
 </style>
