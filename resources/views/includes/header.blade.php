@@ -36,6 +36,7 @@
         background-color: var(--navHoverColour);
         color: var(--navColour);
         box-shadow: var(--widgetHoverBoxShadows);
+        z-index: 999;
     }
     .navbar .active {
         background: var(--navColour);
