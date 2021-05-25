@@ -14,6 +14,14 @@
     </div>
     <div id="furtherContent" class="repeatableHeight repeatableContent">
         <div class="mainIndexContent">
+            <span>
+                <h2>Contact Information</h2>
+                <p>Contact information for the administrator of this site:</p>
+                <ul>
+                    <li>Email: <a href="mailto:ayanamydev@gmail.com">ayanamydev@gmail.com</a></li>
+                    <li>Phone Number: (+61) 493 932 853</li>
+                </ul>
+            </span>
         </div>
     </div>
 @stop
