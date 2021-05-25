@@ -21,7 +21,7 @@ Route::group(['prefix'=>'','as'=>env('NAVABLEPREFIX'), ], function () {
     Route::get('about', function () {
         return view('pages.about');
     }) -> name('About');
-    Route::get('contact', function () {
+    Route::any('contact', function () {
         return view('pages.contact');
     }) -> name('Contact');
     Route::get('legal', function () {

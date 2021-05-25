@@ -2,13 +2,13 @@
 
 @section('content')
     <div class="mainIndexContent">
-        <form id="contactForm" action="action_page.php">
+        <form id="contactForm" method="POST" action="{{ Request::getRequestUri() }}">
+            @csrf
+            <input type="text" id="fname" name="fname" placeholder="First Name">
 
-            <input type="text" id="fname" name="firstname" placeholder="First Name">
+            <input type="text" id="lname" name="lname" placeholder="Last Name">
 
-            <input type="text" id="lname" name="lastname" placeholder="Last Name">
-
-            <textarea id="subject" name="subject" placeholder="Content"></textarea>
+            <textarea id="body" name="body" placeholder="Type Your Message Here"></textarea>
 
             <button type="submit" value="Submit" style="grid-column: 1 / span 2;">Submit</button>
         </form>
@@ -17,6 +17,13 @@
 
 @section('head')
     @parent
+    @if (count(request()->all()) > 0)
+        <script>
+            console.log('mailto:ayanamydev@gmail.com?subject=TaxCalc.com Inquiry from {{ request()->all()["fname"] }} {{ request()->all()["lname"] }}&body={{ request()->all()["body"] }}')
+            window.open('mailto:ayanamydev@gmail.com?subject=TaxCalc.com Inquiry from {{ request()->all()["fname"] }} {{ request()->all()["lname"] }}&body={{ request()->all()["body"] }}')
+        </script>
+    @endif
+
     <style>
         #contactForm * {
             transition: var(--easeTransition);
