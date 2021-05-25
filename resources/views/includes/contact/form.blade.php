@@ -1,8 +1,8 @@
 <form id="contactForm" method="POST" action="{{ Request::getRequestUri() }}">
     @csrf
-    <input type="text" id="fname" name="fname" placeholder="First Name" value="{{ request()->all()["fname"] ?? '' }}">
+    <input type="text" id="fname" name="fname" placeholder="First Name" value="{{ request()->get("fname") }}">
 
-    <input type="text" id="lname" name="lname" placeholder="Last Name" value="{{ request()->all()["lname"] ?? '' }}">
+    <input type="text" id="lname" name="lname" placeholder="Last Name" value="{{ request()->get("lname") }}">
 
     <textarea id="body" name="body" style="width: 75vw; height: 40vh; min-width: 300px;" placeholder="Type Your Message Here"></textarea>
 
@@ -14,7 +14,7 @@
     @if (count(request()->all()) > 0)
         <script>
             window.onload = function(){
-                document.querySelector('textarea#body').innerHTML = '{{ request()->all()["body"] ?? '' }}';
+                document.querySelector('textarea#body').innerHTML = '{{ request()->get("body") }}';
                 location.href = ('mailto:ayanamydev@gmail.com?subject=TaxCalc.com Inquiry from {{ request()->all()["fname"] }} {{ request()->all()["lname"] }}&body={{ request()->all()["body"] }}');
             }
         </script>
