@@ -41,6 +41,7 @@
 @stop
 
 @section('head')
+    @parent
     <style>
         /* set the style of the repeated content */
         .repeatableContent {
