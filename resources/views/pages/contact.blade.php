@@ -9,7 +9,7 @@
 @section('furtherContent')
     @include('includes.other.scrol2tophalf')
     <div id="furtherContent" class="repeatableHeight repeatableContent">
-        <div class="mainIndexContent">
+        <div class="mainIndexContent" style="flex: 1; align-self: stretch;">
             <span>
                 <h2>Contact Information</h2>
                 <p>Contact information for the administrator of this site:</p>
