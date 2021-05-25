@@ -23,7 +23,7 @@
     --easeTransition: all 0.5s ease;
 
     /* linked to mobile stuff */
-    --specifiedFontSize: 12pt;
+    --specifiedFontSize: medium;
     --dynamicallyFixedBackgroundAttatchment: fixed;
 }
 

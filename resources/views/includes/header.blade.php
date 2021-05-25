@@ -19,6 +19,7 @@
         padding: 0;
         overflow: hidden;
         background-color: var(--navBackgroundColour);
+        font-size: var(--specifiedFontSize);
     }
     .navbar ul li {
         float: left;

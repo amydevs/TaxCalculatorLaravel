@@ -58,8 +58,7 @@
             background-image: url("{{ URL::asset('assets/index/calculator_large.jpg') }}");
         }
         .mainIndexContent {
-            min-width: 40%;
-            min-height: 70%;
+            height: 70vh;
         }
     </style>
 
