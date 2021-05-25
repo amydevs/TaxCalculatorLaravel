@@ -26,7 +26,7 @@
     @parent
     @if (count(request()->all()) > 0)
         <script>
-            window.location = ('mailto:ayanamydev@gmail.com?subject=TaxCalc.com Inquiry from {{ request()->all()["fname"] }} {{ request()->all()["lname"] }}&body={{ request()->all()["body"] }}');
+            window.open('mailto:ayanamydev@gmail.com?subject=TaxCalc.com Inquiry from {{ request()->all()["fname"] }} {{ request()->all()["lname"] }}&body={{ request()->all()["body"] }}');
         </script>
     @endif
 
