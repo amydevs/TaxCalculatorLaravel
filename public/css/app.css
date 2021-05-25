@@ -10,7 +10,7 @@
 
     /* normal colour stuff */
     --defaultBackground: #fff;
-    --layerWidgetBackground: rgba(1, 1, 1, 0.06);
+    --layerWidgetBackground: rgba(1, 1, 1, 0.04);
     --textColour: #333;
     --hoverColour: rgba(0, 0, 0, 0.8);
 
