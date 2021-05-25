@@ -74,19 +74,13 @@ button, textarea, input {
     font-weight: 300;
 }
 
-textarea {
-    border-radius: var(--universalBorderRadius);
-    overflow: hidden;
-    border: none;
-    font-size: small;
-}
-
-input {
+input, textarea {
     border-radius: var(--universalBorderRadius);
     border: 0;
     padding: 5px;
+    font-size: small;
 }
-input:focus {
+textarea:focus, input:focus {
     outline: none;
 }
 
