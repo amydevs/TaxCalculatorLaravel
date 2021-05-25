@@ -7,17 +7,19 @@
 @stop
 
 @section('furtherContent')
-    @include('includes.other.scrol2tophalf')
-    <div id="furtherContent" class="repeatableHeight repeatableContent">
-        <div class="mainIndexContent" style="flex: 1; align-self: stretch;">
-            <span>
-                <h2>Contact Information</h2>
-                <p>Contact information for the administrator of this site:</p>
-                <ul>
-                    <li>Email: <a href="mailto:ayanamydev@gmail.com">ayanamydev@gmail.com</a></li>
-                    <li>Phone Number: (+61) 493 932 853</li>
-                </ul>
-            </span>
+    <div class="repeatableHeight scrollSnapStart" style="display: flex;flex-direction: column;">
+        @include('includes.other.scrol2tophalf')
+        <div id="furtherContentViewport" class="repeatableContent" style="flex: 1;">
+            <div class="mainIndexContent" style="flex: 1; align-self: stretch;">
+                <span>
+                    <h2>Contact Information</h2>
+                    <p>Contact information for the administrator of this site:</p>
+                    <ul>
+                        <li>Email: <a href="mailto:ayanamydev@gmail.com">ayanamydev@gmail.com</a></li>
+                        <li>Phone Number: (+61) 493 932 853</li>
+                    </ul>
+                </span>
+            </div>
         </div>
     </div>
 @stop
@@ -41,7 +43,7 @@
         }
     </style>
     <style>
-        #furtherContent {
+        #furtherContentViewport {
             background-image: url("{{ URL::asset('assets/contact/laptopnotepad_large.jpg') }}");
             background-attachment: var(--dynamicallyFixedBackgroundAttatchment);
         }

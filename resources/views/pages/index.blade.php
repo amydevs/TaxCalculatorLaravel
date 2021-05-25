@@ -31,8 +31,14 @@
 @stop
 
 @section('furtherContent')
-    @include('includes.other.scrol2tophalf')
-    <div id="furtherContent" class="repeatableHeight repeatableContent">
+    <div class="repeatableHeight scrollSnapStart" style="display: flex;flex-direction: column;">
+        @include('includes.other.scrol2tophalf')
+        <div id="furtherContentViewport"class="repeatableContent" style="flex: 1;">
+            <div class="mainIndexContent" style="flex: 1; align-self: stretch;">
+                <span>
+                </span>
+            </div>
+        </div>
     </div>
 @stop
 
@@ -59,7 +65,7 @@
     </style>
 
     <style>
-        #furtherContent {
+        #furtherContentViewport {
             background-image: url("{{ URL::asset('assets/index/graphing_calc_large.jpg') }}");
             background-attachment: var(--dynamicallyFixedBackgroundAttatchment);
         }
