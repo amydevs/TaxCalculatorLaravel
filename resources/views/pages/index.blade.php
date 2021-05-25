@@ -40,7 +40,6 @@
     </div>
 @stop
 
-
 @section('head')
     <style>
         /* set the style of the repeated content */
