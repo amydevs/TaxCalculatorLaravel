@@ -41,10 +41,10 @@
         color: var(--defaultBackground);
         box-shadow: var(--widgetHoverBoxShadows);
     }
-    #taxableIncome {
+    input[type=text] {
         box-shadow: var(--widgetBoxShadows);
     }
-    #taxableIncome:focus {
+    input[type=text]:focus {
         box-shadow: var(--widgetHoverBoxShadows);
     }
 </style>
