@@ -98,7 +98,7 @@
             background-size: cover;
         }
         #main {
-            background-image: url("{{ URL::asset('assets/index/calculator_large.jpg') }}");
+            background-image: url("{{ URL::asset('assets/legal/gavel_large.jpg') }}");
         }
     </style>
 @stop

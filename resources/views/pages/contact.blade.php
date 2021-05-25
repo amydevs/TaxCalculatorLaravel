@@ -47,12 +47,12 @@
             background-size: cover;
         }
         #main {
-            background-image: url("{{ URL::asset('assets/index/calculator_large.jpg') }}");
+            background-image: url("{{ URL::asset('assets/contact/handstypingonkeyboard_large.jpg') }}");
         }
     </style>
     <style>
         #furtherContent {
-            background-image: url("{{ URL::asset('assets/index/graphing_calc_large.jpg') }}");
+            background-image: url("{{ URL::asset('assets/contact/laptopnotepad_large.jpg') }}");
             background-attachment: var(--dynamicallyFixedBackgroundAttatchment);
         }
     </style>
