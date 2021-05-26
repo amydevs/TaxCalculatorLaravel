@@ -12,34 +12,36 @@
     </ul>
 </nav>
 
-<style>
-    .navbar ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: var(--navBackgroundColour);
-        font-size: var(--specifiedFontSize);
-    }
-    .navbar ul li {
-        float: left;
-    }
-    .navbar ul li a {
-        display: block;
-        color: var(--navColour);
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        transition: var(--easeTransition);
-    }
-    .navbar ul li a:hover {
-        background-color: var(--navHoverColour);
-        color: var(--navColour);
-        box-shadow: var(--widgetHoverBoxShadows);
-        z-index: 999;
-    }
-    .navbar .active {
-        background: var(--navColour);
-        color: var(--navBackgroundColour);
+<style type="text/less">
+    .navbar {
+        ul {
+            background-color: var(--navBackgroundColour);
+            font-size: var(--specifiedFontSize);
+            list-style-type: none;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            li {
+                float: left;
+                a {
+                    color: var(--navColour);
+                    display: block;
+                    padding: 14px 16px;
+                    text-align: center;
+                    text-decoration: none;
+                    transition: var(--easeTransition);
+                    &:hover {
+                        background-color: var(--navHoverColour);
+                        box-shadow: var(--widgetHoverBoxShadows);
+                        color: var(--navColour);
+                        z-index: 999;
+                    }
+                }
+            }
+        }
+        .active {
+            background: var(--navColour);
+            color: var(--navBackgroundColour);
+        }
     }
 </style>

@@ -13,6 +13,7 @@
         display: flex;
     }
 
+
     #scroll2Top {
         display: none;
         position: fixed;
