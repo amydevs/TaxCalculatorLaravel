@@ -18,6 +18,7 @@ Route::group(['prefix'=>'','as'=>env('NAVABLEPREFIX'), ], function () {
     Route::any('', function () {
         return view('pages.index');
     }) -> name('Home');
+    // This is for making my a dynamic link to my about page.
     $basehome = "";
     foreach (Request::query() as $key => $query) {
         $index = array_search($key, Request::query());
@@ -30,6 +31,7 @@ Route::group(['prefix'=>'','as'=>env('NAVABLEPREFIX'), ], function () {
     Route::any($basehome, function (Request $request) {
         return view('pages.index');
     }) -> name('About');
+    // End of that section.
 
     Route::any('contact', function () {
         return view('pages.contact');
