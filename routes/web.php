@@ -18,6 +18,9 @@ Route::group(['prefix'=>'','as'=>env('NAVABLEPREFIX'), ], function () {
     Route::any('', function () {
         return view('pages.index');
     }) -> name('Home');
+    Route::any('#about', function () {
+        return view('pages.index');
+    }) -> name('About');
     Route::any('contact', function () {
         return view('pages.contact');
     }) -> name('Contact');
