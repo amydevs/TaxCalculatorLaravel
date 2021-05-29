@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\URL;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,12 +21,14 @@ Route::group(['prefix'=>'','as'=>env('NAVABLEPREFIX'), ], function () {
     }) -> name('Home');
     // This is for making my a dynamic link to my about page.
     $basehome = "";
-    foreach (Request::query() as $key => $query) {
-        $index = array_search($key, Request::query());
-        $length = sizeof(Request::query()) - 1;
-        if ($index == 0) { $basehome = "?"; }
-        $basehome = "$basehome$key=$query";
-        if ($index != $length) { $basehome = "$basehome&"; }
+    if( URL::current() == URL::to('/')) {
+        foreach (Request::query() as $key => $query) {
+            $index = array_search($key, Request::query());
+            $length = sizeof(Request::query()) - 1;
+            if ($index == 0) { $basehome = "?"; }
+            $basehome = "$basehome$key=$query";
+            if ($index != $length) { $basehome = "$basehome&"; }
+        }
     }
     $basehome = "$basehome#about";
     Route::any($basehome, function (Request $request) {

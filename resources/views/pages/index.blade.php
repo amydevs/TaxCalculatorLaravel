@@ -10,8 +10,6 @@
 
     $taxableIncome = request()->get("taxableIncome");
 
-
-
     $selectedBracket = request()->input($bracketQueryKey);
     if (Str::length($selectedBracket) == 0) { $selectedBracket = $defaultBracket; }
 
