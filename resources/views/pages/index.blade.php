@@ -33,9 +33,10 @@
         <div id="furtherContent" class="repeatableContent" style="flex: 1;">
             <div class="mainIndexContent" style="flex: 1; align-self: stretch;">
                 <span>
-                    <h1>2021/2020 Brackets</h1>
+                    <h1>About</h1>
+                    <h2>2021/2020 Brackets</h2>
                     @foreach ($calculatorObject->allBrackets as $key => $aboutBracket)
-                        <h2>{{ $key }}</h2>
+                        <h3>{{ $key }}</h3>
                         @include('includes.index.table',  ['taxBrackets' => $aboutBracket])
                     @endforeach
                     @if (Str::length($taxableIncome) != 0)
