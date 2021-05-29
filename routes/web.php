@@ -18,12 +18,23 @@ Route::group(['prefix'=>'','as'=>env('NAVABLEPREFIX'), ], function () {
     Route::any('', function () {
         return view('pages.index');
     }) -> name('Home');
-    Route::any('#about', function () {
+    $basehome = "";
+    foreach (Request::query() as $key => $query) {
+        $index = array_search($key, Request::query());
+        $length = sizeof(Request::query()) - 1;
+        if ($index == 0) { $basehome = "?"; }
+        $basehome = "$basehome$key=$query";
+        if ($index != $length) { $basehome = "$basehome&"; }
+    }
+    $basehome = "$basehome#about";
+    Route::any($basehome, function (Request $request) {
         return view('pages.index');
     }) -> name('About');
+
     Route::any('contact', function () {
         return view('pages.contact');
     }) -> name('Contact');
+
     Route::get('legal', function () {
         return view('pages.legal');
     }) -> name('Legal');
