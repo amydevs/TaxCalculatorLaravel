@@ -20,7 +20,7 @@
 @section('content')
     <div class="mainIndexContent">
         @include('includes.index.formnav')
-        <h3 style="margin: 5px 0px 5px 3px;">TaxCalc.com - Please Enter your Details:</h3>
+        <h3 style="margin: 5px 0px 5px 3px;">Tax Calculator for {{ $selectedBracket }} 2021/2020</h3>
         @include('includes.index.table',  ['taxBrackets' => $brackets])
         @include('includes.index.form')
     </div>
