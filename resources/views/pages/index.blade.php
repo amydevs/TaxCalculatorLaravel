@@ -24,18 +24,23 @@
         @include('includes.index.formnav')
         @include('includes.index.table',  ['taxBrackets' => $brackets])
         @include('includes.index.form')
-        @if (Str::length($taxableIncome) != 0)
-            {{ $calculatorObject->calculate($taxableIncome, $brackets) }}
-        @endif
     </div>
 @stop
 
 @section('furtherContent')
-    <div class="repeatableHeight scrollSnapStart" style="display: flex;flex-direction: column;">
+    <div class="repeatableHeight scrollSnapStart" id="about" style="display: flex;flex-direction: column;">
         @include('includes.other.scrol2tophalf')
         <div id="furtherContent" class="repeatableContent" style="flex: 1;">
             <div class="mainIndexContent" style="flex: 1; align-self: stretch;">
                 <span>
+                    <h1>2021/2020 Brackets</h1>
+                    @foreach ($calculatorObject->allBrackets as $key => $aboutBracket)
+                        <h2>{{ $key }}</h2>
+                        @include('includes.index.table',  ['taxBrackets' => $aboutBracket])
+                    @endforeach
+                    @if (Str::length($taxableIncome) != 0)
+                        {{ $calculatorObject->calculate($taxableIncome, $brackets) }}
+                    @endif
                 </span>
             </div>
         </div>
