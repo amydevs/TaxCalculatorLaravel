@@ -9,4 +9,4 @@
 <link rel="manifest" href="assets/manifest.json">
 <link rel="apple-touch-icon" href="assets/icons/calculator_icon_192.png">
 
-<title>Tax Calculator</title>
+<title>{{ str_replace(env('NAVABLEPREFIX'), "", Route::currentRouteName()) }} - Tax Calculator</title>
