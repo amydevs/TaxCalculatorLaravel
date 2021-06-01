@@ -59,6 +59,24 @@ html {
 .scrollSnapEnd {
     scroll-snap-align: center;
 }
+/* for firefox */
+* {
+    scrollbar-color: var(--navColour) var(--navBackgroundColour);
+    scrollbar-width: thin;
+}
+/* for other vendors */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--navBackgroundColour);
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--navColour);
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #cecece;
+}
 
 /* standardizes fonts and inputs */
 body, input, button, textarea {

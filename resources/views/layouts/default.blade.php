@@ -23,7 +23,7 @@
 
             @yield('furtherContent')
 
-            <footer class="row scrollSnapEnd">
+            <footer class="row scrollSnapStart">
                 @include('includes.footer')
             </footer>
         </body>
