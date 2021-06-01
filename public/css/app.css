@@ -30,7 +30,7 @@
 /* for mobile devices or smaller screens */
 @media screen and (max-width: 479px) {
     :root {
-        --specifiedFontSize: 10pt;
+        --specifiedFontSize: 9pt;
     }
 }
 /* only mobile */
