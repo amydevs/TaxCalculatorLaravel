@@ -25,26 +25,6 @@
     <style>
         .taxTable {
             width: 100%;
-            border-collapse:separate;
-            border: solid var(--textColour) 4px;
-            border-radius: var(--universalBorderRadius);
-            box-shadow: var(--widgetBoxShadows);
-            font-size: var(--specifiedFontSize);
-            border-spacing: 0;
-            overflow: hidden;
-            word-break: break-all;
-        }
-        .taxTable :is(td, th) {
-            border-left: solid var(--textColour) 2px;
-            border-top: solid var(--textColour) 2px;
-            text-align: center;
-            padding: 6px;
-        }
-        .taxTable th {
-            border-top: none;
-        }
-        .taxTable td:first-child, th:first-child {
-            border-left: none;
         }
     </style>
 @endsection
