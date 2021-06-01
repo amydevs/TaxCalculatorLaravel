@@ -1,7 +1,7 @@
 <div class="calculatorFormDiv">
     <form method="POST" action="{{ Request::getRequestUri() }}#about" id="calcform">
         @csrf
-        <input style="grid-column: 1 / span 2;" type="text" id="taxableIncome" name="taxableIncome" placeholder="Enter Your Taxable Income" value='{{ request()->get("taxableIncome") }}' required>
+        <input style="grid-column: 1 / span 2;" type="text" id="taxableIncome" name="taxableIncome" placeholder="Enter Taxable Income" value='{{ request()->get("taxableIncome") }}' required>
         <button style="grid-column: 1 / span 2;" type="submit" form="calcform" value="submit">Submit</button>
     </form>
 </div>
