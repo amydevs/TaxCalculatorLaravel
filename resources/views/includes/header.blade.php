@@ -1,5 +1,5 @@
 <nav class="navbar">
-    <ul class="nav">
+    <ul class="nav" style="">
         @foreach (Route::getRoutes() as $route)
             @if (strpos($route->getName(), env('NAVABLEPREFIX')) === 0)
                 <li>
@@ -9,6 +9,11 @@
                 </li>
             @endif
         @endforeach
+        <li>
+            <a href="javascript:document.querySelector(':root').classList.toggle('darkMode');"">
+                Dark Mode
+            </a>
+        </li>
     </ul>
 </nav>
 

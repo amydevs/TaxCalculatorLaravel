@@ -27,6 +27,14 @@
     --dynamicallyFixedBackgroundAttatchment: fixed;
 }
 
+:root.darkMode {
+    /* darkmodestuff */
+    --defaultBackground: #333;
+    --layerWidgetBackground: rgba(255, 255, 255, 0.04);
+    --textColour: #fff;
+    --hoverColour: rgba(255, 255, 255, 0.8)
+}
+
 /* for mobile devices or smaller screens */
 @media screen and (max-width: 479px) {
     :root {
