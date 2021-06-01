@@ -21,7 +21,9 @@
     <div class="mainIndexContent">
         @include('includes.index.formnav')
         <h3 style="margin: 5px 0px 5px 3px;">Tax Calculator for {{ $selectedBracket }} 2021/2020</h3>
-        @include('includes.index.table',  ['taxBrackets' => $brackets])
+        <div id="firstIndexTableContainer">
+            @include('includes.index.table',  ['taxBrackets' => $brackets])
+        </div>
         @include('includes.index.form')
     </div>
 @stop
@@ -67,7 +69,31 @@
         .mainIndexContent {
             min-height: 70vh;
         }
+        /* Set Table Sizes */
+        #firstIndexTableContainer {
+            width: 100%;
+            flex: 1;
+        }
+        #firstIndexTableContainer > table {
+            width: 100%;
+            height: 100%;
+        }
     </style>
+    {{-- Fixes table sizes for Chrome only! --}}
+    @if (strpos(request()->header('User-Agent'), "Chrome") !== false)
+        <script>
+            window.onload = function() {
+                var taxCont = document.querySelector("#firstIndexTableContainer");
+                var taxTable = taxCont.querySelector("table");
+                function resized() {
+                    taxTable.style.height = "0px";
+                    taxTable.style.height = `${taxCont.offsetHeight}px`;
+                }
+                resized()
+                window.onresize = resized;
+            }
+        </script>
+    @endif
 
     <style>
         #furtherContent {

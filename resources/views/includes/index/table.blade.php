@@ -7,7 +7,7 @@
             <th>Tax Payable on This Income</th>
         </tr>
     </thead>
-    <tbody style="height: 100%;">
+    <tbody>
         @foreach ($taxBrackets as $key=>$bracket)
             <tr>
                 <td>${{ $bracket["minThreshold"] }} {{ array_key_exists($key+1, $taxBrackets) ? "to $".($taxBrackets[$key+1]["minThreshold"] - 1) : "and Over" }}</td>
@@ -24,7 +24,6 @@
 <style>
     .taxTable {
         width: 100%;
-        flex: 1;
         border-collapse:separate;
         border: solid var(--textColour) 4px;
         border-radius: var(--universalBorderRadius);
@@ -32,8 +31,9 @@
         font-size: var(--specifiedFontSize);
         border-spacing: 0;
         overflow: hidden;
+        word-break: break-all;
     }
-    .taxTable td, th {
+    .taxTable :is(td, th) {
         border-left: solid var(--textColour) 2px;
         border-top: solid var(--textColour) 2px;
         text-align: center;
