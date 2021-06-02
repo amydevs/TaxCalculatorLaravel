@@ -153,6 +153,7 @@ table :is(td, th) {
     border-top: solid var(--textColour) 2px;
     text-align: center;
     padding: 6px;
+    word-break: break-word;
 }
 table th {
     border-top: none;
