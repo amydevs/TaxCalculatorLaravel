@@ -109,6 +109,16 @@ input, textarea {
 textarea:focus, input:focus {
     outline: none;
 }
+/* hiding number selector for firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+/* for other vendors */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 /* standardizes heights for containers */
 .mainContainer {

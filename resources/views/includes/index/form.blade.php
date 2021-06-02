@@ -43,10 +43,10 @@
             color: var(--defaultBackground);
             box-shadow: var(--widgetHoverBoxShadows);
         }
-        input[type=text] {
+        input[type=number] {
             box-shadow: var(--widgetBoxShadows);
         }
-        input[type=text]:focus {
+        input[type=number]:focus {
             box-shadow: var(--widgetHoverBoxShadows);
         }
     </style>
