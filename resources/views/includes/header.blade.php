@@ -46,7 +46,7 @@
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
-        transition: all var(--easeTransition);
+        transition: box-shadow var(--easeTransition), background-color var(--easeTransition);
     }
     .navbar ul li a:hover {
         background-color: var(--navHoverColour);
