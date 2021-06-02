@@ -1,11 +1,11 @@
 {
     "name": "Tax Calculator by AyanAmy",
     "short_name": "Tax Calculator",
-    "start_url": "",
+    "start_url": "./",
     "scope": "./",
     "icons": [
       {
-        "src": "icons/calculator_icon_192.png",
+        "src": "assets/icons/calculator_icon_192.png",
         "sizes": "192x192",
         "type": "image/png"
       }
