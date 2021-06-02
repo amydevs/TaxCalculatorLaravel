@@ -78,7 +78,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-attachment: fixed;
+            background-attachment: var(--dynamicallyFixedBackgroundAttatchment);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;

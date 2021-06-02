@@ -41,7 +41,7 @@
 /* for mobile devices or smaller screens */
 @media screen and (max-width: 479px) {
     :root {
-        --specifiedFontSize: 9pt;
+        --specifiedFontSize: 10pt;
     }
 }
 /* only mobile */
@@ -58,7 +58,6 @@ body {
 /* scrolling stuff */
 html {
     scroll-behavior: smooth;
-    scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y proximity;
 }
 .scrollSnapStart {
