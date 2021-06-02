@@ -42,7 +42,7 @@
                     @include('includes.index.outputtable')
                     <p style="text-align: center">
                         You need to pay ${{ $calculatorObject->calculate($taxableIncome, $brackets) }} in Tax.<br>
-                        Please click the arrow at the top to enter another calculation.
+                        Please click the up-arrow or scroll to the top to complete another calculation.
                     </p>
                 </span>
             </div>
