@@ -33,7 +33,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-attachment: fixed;
+            background-attachment: var(--dynamicallyFixedBackgroundAttatchment);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -45,7 +45,6 @@
     <style>
         #furtherContent {
             background-image: url("{{ URL::asset('assets/contact/laptopnotepad_large.jpg') }}");
-            background-attachment: var(--dynamicallyFixedBackgroundAttatchment);
         }
     </style>
 @stop

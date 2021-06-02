@@ -90,9 +90,8 @@
         #firstIndexTableContainer {
             width: 100%;
             flex: 1;
-        }
-        #firstIndexTableContainer > table {
-            height: 100%;
+            display: flex;
+            align-items: stretch;
         }
         table {
             width: 100%;
@@ -117,11 +116,9 @@
     <style>
         #outputContent {
             background-image: url("{{ URL::asset('assets/index/scientific_calc_large.jpg') }}");
-            background-attachment: var(--dynamicallyFixedBackgroundAttatchment);
         }
         #furtherContent {
             background-image: url("{{ URL::asset('assets/index/graphing_calc_large.jpg') }}");
-            background-attachment: var(--dynamicallyFixedBackgroundAttatchment);
         }
     </style>
 @stop
