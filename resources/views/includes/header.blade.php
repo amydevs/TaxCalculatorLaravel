@@ -10,12 +10,22 @@
             @endif
         @endforeach
         <li>
-            <a href="javascript:document.querySelector(':root').classList.toggle('darkMode');"">
+            <a onclick="toggleDarkmode()" style="cursor: pointer;">
                 Dark Mode
             </a>
         </li>
     </ul>
 </nav>
+
+{{-- Darkmode Toggle Stuff --}}
+<script>
+    var rootClassList = document.querySelector(':root').classList;
+    if(localStorage.darkMode == 'true') { toggleDarkmode() }
+    function toggleDarkmode() {
+        rootClassList.toggle('darkMode');
+        localStorage.setItem('darkMode', rootClassList.contains('darkMode'));
+    }
+</script>
 
 <style>
     .navbar ul {
