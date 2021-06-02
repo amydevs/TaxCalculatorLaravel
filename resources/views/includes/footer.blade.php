@@ -29,7 +29,7 @@
         align-items: center;
         border-radius: 100%;
         font-size: 50pt;
-        transition: var(--easeTransition);
+        transition: all var(--easeTransition);
     }
 
     #scroll2Top:hover {

@@ -20,19 +20,22 @@
     --navHoverColour: rgba(1, 1, 1, 0.5);
 
     /* transitions */
-    --easeTransition: all 0.5s ease;
+    --easeTransition: 0.5s ease;
 
     /* linked to mobile stuff */
     --specifiedFontSize: medium;
     --dynamicallyFixedBackgroundAttatchment: fixed;
 }
 
+/* dark mode stuff */
 :root.darkMode {
-    /* darkmodestuff */
     --defaultBackground: #333;
     --layerWidgetBackground: rgba(255, 255, 255, 0.04);
     --textColour: #fff;
     --hoverColour: rgba(255, 255, 255, 0.8)
+}
+* {
+    transition: background-color var(--easeTransition);
 }
 
 /* for mobile devices or smaller screens */

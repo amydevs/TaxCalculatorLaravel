@@ -23,7 +23,7 @@
     <style>
         /* form styling */
         #contactForm * {
-            transition: var(--easeTransition);
+            transition: all var(--easeTransition);
         }
         #contactForm {
             display: flex;

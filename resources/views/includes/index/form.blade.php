@@ -10,7 +10,7 @@
     @parent
     <style>
         #calcform * {
-            transition: var(--easeTransition);
+            transition: all var(--easeTransition);
         }
         #calcform {
             display: grid;
