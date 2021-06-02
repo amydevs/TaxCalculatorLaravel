@@ -1,5 +1,5 @@
 <nav class="navbar">
-    <ul class="nav" style="">
+    <ul class="nav">
         @foreach (Route::getRoutes() as $route)
             @if (strpos($route->getName(), env('NAVABLEPREFIX')) === 0)
                 <li>
@@ -10,7 +10,7 @@
             @endif
         @endforeach
         <li>
-            <a onclick="toggleDarkmode()" style="cursor: pointer;">
+            <a id="darkModeButton" onclick="toggleDarkmode()" style="cursor: pointer;">
                 Dark Mode
             </a>
         </li>
@@ -24,6 +24,7 @@
     function toggleDarkmode() {
         rootClassList.toggle('darkMode');
         localStorage.setItem('darkMode', rootClassList.contains('darkMode'));
+        document.querySelector('#darkModeButton').classList.toggle('active')
     }
 </script>
 
