@@ -33,7 +33,7 @@
     @if (Str::length($taxableIncome) != 0)
     <div class="repeatableHeight scrollSnapStart" id="output" style="display: flex;flex-direction: column;">
         @include('includes.other.scrol2tophalf')
-        <div id="furtherContent" class="repeatableContent" style="flex: 1;">
+        <div id="outputContent" class="repeatableContent" style="flex: 1;">
             <div class="mainIndexContent">
                 <span>
                     <h1>Results</h1>
@@ -115,6 +115,10 @@
     @endif
 
     <style>
+        #outputContent {
+            background-image: url("{{ URL::asset('assets/index/scientific_calc_large.jpg') }}");
+            background-attachment: var(--dynamicallyFixedBackgroundAttatchment);
+        }
         #furtherContent {
             background-image: url("{{ URL::asset('assets/index/graphing_calc_large.jpg') }}");
             background-attachment: var(--dynamicallyFixedBackgroundAttatchment);
