@@ -18,13 +18,3 @@
         @endforeach
     </tbody>
 </table>
-
-
-@section('head')
-    @parent
-    <style>
-        .taxTable {
-            width: 100%;
-        }
-    </style>
-@endsection

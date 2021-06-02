@@ -1,5 +1,5 @@
 <div class="calculatorFormDiv">
-    <form method="POST" action="{{ Request::getRequestUri() }}#about" id="calcform" autocomplete="off">
+    <form method="POST" action="{{ Request::getRequestUri() }}#output" id="calcform" autocomplete="off">
         @csrf
         <input style="grid-column: 1 / span 2;" type="number" id="taxableIncome" name="taxableIncome" placeholder="Enter Taxable Income" value='{{ request()->get("taxableIncome") }}' required>
         <button style="grid-column: 1 / span 2;" type="submit" form="calcform" value="submit">Submit</button>
