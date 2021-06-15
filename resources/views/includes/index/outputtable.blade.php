@@ -16,21 +16,21 @@
                         if(!$hasTaxBracketSpecLoopFinished) {
                             if(array_key_exists($key+1, $brackets)){
                                 if($taxableIncome >= $value["minThreshold"] AND $taxableIncome <= $brackets[$key+1]["minThreshold"]-1) {
-                                    echo "$".$value["minThreshold"]." to $".($brackets[$key+1]["minThreshold"] - 1);
+                                    echo "$".number_format($value["minThreshold"])." to $".number_format($brackets[$key+1]["minThreshold"] - 1);
                                     $hasTaxBracketSpecLoopFinished = true;
                                 }
                             }
                             else {
-                                echo "$".end($brackets)["minThreshold"]."and Over";
+                                echo "$".number_format(end($brackets)["minThreshold"])."and Over";
                                 $hasTaxBracketSpecLoopFinished = true;
                             }
                         }
                     }
                 @endphp
             </td>
-            <td>${{ $taxableIncome }}</td>
-            <td>${{ $calculatorObject->calculate($taxableIncome, $brackets) }}</td>
-            <td>${{ $taxableIncome - ($calculatorObject->calculate($taxableIncome, $brackets)) }}</td>
+            <td>${{ number_format($taxableIncome) }}</td>
+            <td>${{ number_format($calculatorObject->calculate($taxableIncome, $brackets)) }}</td>
+            <td>${{ number_format($taxableIncome - ($calculatorObject->calculate($taxableIncome, $brackets))) }}</td>
         </tr>
     </tbody>
 </table>

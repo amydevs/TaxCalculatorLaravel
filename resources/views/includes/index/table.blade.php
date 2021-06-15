@@ -10,7 +10,7 @@
     <tbody>
         @foreach ($taxBrackets as $key=>$bracket)
             <tr>
-                <td>${{ number_format($bracket["minThreshold"]) }} {{ array_key_exists($key+1, $taxBrackets) ? "to $".number_format(($taxBrackets[$key+1]["minThreshold"] - 1)) : "and Over" }}</td>
+                <td>${{ number_format($bracket["minThreshold"]) }} {{ array_key_exists($key+1, $taxBrackets) ? "to $".number_format($taxBrackets[$key+1]["minThreshold"] - 1) : "and Over" }}</td>
                 <td>${{ number_format($bracket["baseTax"]) }}</td>
                 <td>{{ $bracket["perDollarTax"] * 100 }}%</td>
                 <td>${{ number_format($bracket["baseTax"]) }} plus ${{ number_format($bracket["perDollarTax"]) }} for each $1 over ${{ number_format($bracket["minThreshold"] - 1) }}</td>
