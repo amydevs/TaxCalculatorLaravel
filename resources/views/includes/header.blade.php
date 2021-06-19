@@ -1,3 +1,4 @@
+<!-- Written/Edited by June Yan (c) 2021 -->
 <nav class="navbar">
     <ul class="nav">
         @foreach (Route::getRoutes() as $route)

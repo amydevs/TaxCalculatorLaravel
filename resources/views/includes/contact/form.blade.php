@@ -1,3 +1,4 @@
+<!-- Written/Edited by June Yan (c) 2021 -->
 <form id="contactForm" method="POST" action="{{ Request::getRequestUri() }}">
     @csrf
     <input type="text" id="fname" name="fname" placeholder="First Name" value="{{ request()->get("fname") }}" required>

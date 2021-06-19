@@ -1,3 +1,4 @@
+<!-- Written/Edited by June Yan (c) 2021 -->
 <div class="navbar">
     <ul style="margin:-10px; margin-bottom: 0px;">
         @foreach ($calculatorObject->allBrackets as $key=>$selectableBracket)
