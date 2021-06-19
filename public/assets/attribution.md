@@ -1,3 +1,5 @@
+<!-- Written/Edited by June Yan (c) 2021 -->
+
 ## Fonts
 `./fonts/Roboto`
 Apache License 2.0 - Christian Robertson - https://fonts.google.com/specimen/Roboto
