@@ -14,6 +14,7 @@
     </div>
     <span style="font-size: 10pt;">© Copyright 2021 AyanAmy</span>
 </div>
+{{-- bottom left scroll to top buttons --}}
 <button onclick="javascript:document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" id="scroll2Top" title="Go to top">
     <svg style="width:24px;height:24px" viewBox="0 0 24 24">
         <path fill="currentColor" d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
@@ -75,6 +76,7 @@
     scrollButton.style.display = "flex";
 
     document.addEventListener('scroll', (e) => {
+        // when scroll past 20 pixels, enable the scroll 2 top button
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             scrollButton.style.transform = "translateX(-2vh)";
         }

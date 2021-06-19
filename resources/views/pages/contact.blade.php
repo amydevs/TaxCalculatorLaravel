@@ -3,6 +3,7 @@
 
 @section('content')
     <div class="mainIndexContent">
+        {{-- includes the file contact/form.blade.php --}}
         @include("includes.contact.form")
     </div>
 @stop

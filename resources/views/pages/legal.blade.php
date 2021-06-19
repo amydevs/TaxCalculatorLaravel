@@ -2,6 +2,7 @@
 @extends('layouts.default')
 
 @section('content')
+    {{-- privacy policy page --}}
     <div class="mainIndexContent">
         <span>
             <h1>Privacy Policy for TaxCalc.com</h1>

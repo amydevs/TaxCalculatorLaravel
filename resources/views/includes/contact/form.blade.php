@@ -1,4 +1,5 @@
 <!-- Written/Edited by June Yan (c) 2021 -->
+{{-- post to current page --}}
 <form id="contactForm" method="POST" action="{{ Request::getRequestUri() }}">
     @csrf
     <input type="text" id="fname" name="fname" placeholder="First Name" value="{{ request()->get("fname") }}" required>
@@ -12,6 +13,7 @@
 
 @section('head')
     @parent
+    {{-- if there are POST values, redirect to a mailto protocol url that sends an email with your default email client --}}
     @if (count(request()->all()) > 0)
         <script>
             window.onload = function(){

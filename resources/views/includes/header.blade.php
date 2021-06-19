@@ -1,15 +1,18 @@
 <!-- Written/Edited by June Yan (c) 2021 -->
 <nav class="navbar">
     <ul class="nav">
+        {{-- for each NAVABLE route defined in routes/web.php, a button is created in the navbar with the name --}}
         @foreach (Route::getRoutes() as $route)
             @if (strpos($route->getName(), env('NAVABLEPREFIX')) === 0)
                 <li>
+                    {{-- if the currently selected route name is the same as the name of the route in this loop, give it the "active" class --}}
                     <a href="{{route($route->getName())}}" class="{{ Route::currentRouteNamed($route->getName()) ? 'active' : '' }}">
                         {{ str_replace(env('NAVABLEPREFIX'), "", $route->getName()) }}
                     </a>
                 </li>
             @endif
         @endforeach
+        {{-- dark mode button --}}
         <li>
             <a id="darkModeButton" onclick="toggleDarkmode()" style="cursor: pointer;">
                 Dark Mode

@@ -13,6 +13,7 @@
             <td>
                 @php
                     $hasTaxBracketSpecLoopFinished = false;
+                    // find the bracket thats the result belongs to
                     foreach ($brackets as $key => $value) {
                         if(!$hasTaxBracketSpecLoopFinished) {
                             if(array_key_exists($key+1, $brackets)){

@@ -1,5 +1,6 @@
 <!-- Written/Edited by June Yan (c) 2021 -->
 <div class="calculatorFormDiv">
+    {{-- post to current url --}}
     <form method="POST" action="{{ Request::getRequestUri() }}#output" id="calcform" autocomplete="off">
         @csrf
         <input style="grid-column: 1 / span 2;" type="number" id="taxableIncome" name="taxableIncome" placeholder="Enter Taxable Income" value='{{ request()->get("taxableIncome") }}' required>

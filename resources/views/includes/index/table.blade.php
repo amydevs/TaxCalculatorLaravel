@@ -9,6 +9,7 @@
         </tr>
     </thead>
     <tbody>
+        {{-- for each bracket in the bracket array, display the information in a table row --}}
         @foreach ($taxBrackets as $key=>$bracket)
             <tr>
                 <td>${{ number_format($bracket["minThreshold"]) }} {{ array_key_exists($key+1, $taxBrackets) ? "to $".number_format($taxBrackets[$key+1]["minThreshold"] - 1) : "and Over" }}</td>
