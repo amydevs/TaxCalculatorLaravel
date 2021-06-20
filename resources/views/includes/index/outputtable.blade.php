@@ -31,6 +31,7 @@
                 @endphp
             </td>
             <td>${{ number_format($taxableIncome) }}</td>
+            {{-- number_format is to add commas for number readability, the reason these ones look different are becuase they have 2 decimal places --}}
             <td>${{ number_format($calculatorObject->calculate($taxableIncome, $selectedBracket), 2, '.', ',') }}</td>
             <td>${{ number_format($taxableIncome - ($calculatorObject->calculate($taxableIncome, $selectedBracket)), 2, '.', ',') }}</td>
         </tr>
