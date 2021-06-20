@@ -21,6 +21,7 @@ class Calculator {
     }
 
     function calculate($input, $selectedBracket) {
+        // Gets the brackets array from $allBrackets key/name
         $brackets = $this->allBrackets[$selectedBracket];
         $taxToBePaid = 0;
         $thresholds = array_column($brackets, 'minThreshold');
