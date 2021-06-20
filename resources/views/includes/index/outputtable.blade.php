@@ -31,8 +31,8 @@
                 @endphp
             </td>
             <td>${{ number_format($taxableIncome) }}</td>
-            <td>${{ number_format($calculatorObject->calculate($taxableIncome, $selectedBracket)) }}</td>
-            <td>${{ number_format($taxableIncome - ($calculatorObject->calculate($taxableIncome, $selectedBracket))) }}</td>
+            <td>${{ number_format($calculatorObject->calculate($taxableIncome, $selectedBracket), 2, '.', ',') }}</td>
+            <td>${{ number_format($taxableIncome - ($calculatorObject->calculate($taxableIncome, $selectedBracket)), 2, '.', ',') }}</td>
         </tr>
     </tbody>
 </table>
