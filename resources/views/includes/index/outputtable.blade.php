@@ -23,7 +23,7 @@
                                 }
                             }
                             else {
-                                echo "$".number_format(end($brackets)["minThreshold"])."and Over";
+                                echo "$".number_format(end($brackets)["minThreshold"])." and Over";
                                 $hasTaxBracketSpecLoopFinished = true;
                             }
                         }
