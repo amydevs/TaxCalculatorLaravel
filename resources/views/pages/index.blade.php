@@ -48,7 +48,7 @@
                     <br>
                     @include('includes.index.outputtable')
                     <p style="text-align: center">
-                        You need to pay ${{ $calculatorObject->calculate($taxableIncome, $brackets) }} in Tax.<br>
+                        You need to pay ${{ $calculatorObject->calculate($taxableIncome, $selectedBracket) }} in Tax.<br>
                         Please click the up-arrow or scroll to the top to complete another calculation.
                     </p>
                 </span>

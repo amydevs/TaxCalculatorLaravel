@@ -20,7 +20,8 @@ class Calculator {
         ];
     }
 
-    function calculate($input, $brackets) {
+    function calculate($input, $selectedBracket) {
+        $brackets = $this->allBrackets[$selectedBracket];
         $taxToBePaid = 0;
         $thresholds = array_column($brackets, 'minThreshold');
         array_multisort($thresholds, SORT_DESC, $brackets);
