@@ -1,4 +1,4 @@
-<!-- Written/Edited by June Yan (c) 2021 -->
+{{-- Written/Edited by June Yan (c) 2021 --}}
 <nav class="navbar">
     <ul class="nav">
         {{-- for each NAVABLE route defined in routes/web.php, a button is created in the navbar with the name --}}

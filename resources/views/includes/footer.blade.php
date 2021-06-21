@@ -1,4 +1,4 @@
-<!-- Written/Edited by June Yan (c) 2021 -->
+{{-- Written/Edited by June Yan (c) 2021 --}}
 <div id="footer">
     <div class="flexerClass" style="flex: 1; align-self: stretch; flex-flow: column; gap: 24px;">
         <div style="text-align: center; font-size: 18pt;">TaxCalc.com</div>

@@ -1,3 +1,4 @@
+{{-- Written/Edited by June Yan (c) 2021 --}}
 <div style="width: 100%; height: 8px; background: var(--navBackgroundColour); display:flex; justify-content:center; box-shadow: var(--widgetBoxShadows);" class="">
     <div id="scroll2topbuttonhalf" style="width: 50px; height: 50px; border-radius: 0px 0px 100px 100px; background: var(--navBackgroundColour); display:flex; justify-content:center; align-items:center; cursor: pointer; color: var(--navColour); z-index: 999;"
         onclick="javascript:document.body.scrollTop = 0; document.documentElement.scrollTop = 0;">

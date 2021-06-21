@@ -1,5 +1,5 @@
-<!-- Written/Edited by June Yan (c) 2021 -->
 <?php
+// Written/Edited by June Yan (c) 2021
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;

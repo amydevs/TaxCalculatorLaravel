@@ -1,5 +1,5 @@
-<!-- Written/Edited by June Yan (c) 2021 -->
 <?php
+// Written/Edited by June Yan (c) 2021
 class Calculator {
     public $allBrackets;
 

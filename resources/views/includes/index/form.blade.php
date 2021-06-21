@@ -1,4 +1,4 @@
-<!-- Written/Edited by June Yan (c) 2021 -->
+{{-- Written/Edited by June Yan (c) 2021 --}}
 <div class="calculatorFormDiv">
     {{-- post to current url --}}
     <form method="POST" action="{{ Request::getRequestUri() }}#output" id="calcform" autocomplete="off">

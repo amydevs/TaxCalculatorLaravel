@@ -1,4 +1,4 @@
-<!-- Written/Edited by June Yan (c) 2021 -->
+{{-- Written/Edited by June Yan (c) 2021 --}}
 {{-- Basic Meta Tags --}}
 <meta charset="utf-8">
 <meta name="description" content="">

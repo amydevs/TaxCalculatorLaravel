@@ -1,4 +1,4 @@
-<!-- Written/Edited by June Yan (c) 2021 -->
+{{-- Written/Edited by June Yan (c) 2021 --}}
 {{-- navigation for the selected bracket --}}
 <div class="navbar">
     <ul style="margin:-10px; margin-bottom: 0px;">

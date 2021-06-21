@@ -1,4 +1,4 @@
-<!-- Written/Edited by June Yan (c) 2021 -->
+{{-- Written/Edited by June Yan (c) 2021 --}}
 {{-- post to current page --}}
 <form id="contactForm" method="POST" action="{{ Request::getRequestUri() }}">
     @csrf

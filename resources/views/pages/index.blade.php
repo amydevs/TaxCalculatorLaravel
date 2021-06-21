@@ -1,4 +1,4 @@
-<!-- Written/Edited by June Yan (c) 2021 -->
+{{-- Written/Edited by June Yan (c) 2021 --}}
 {{-- this is the main home page of the site --}}
 {{-- uses layouts/default.blade.php as a template for this page --}}
 @extends('layouts.default')
