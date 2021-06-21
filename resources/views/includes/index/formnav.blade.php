@@ -9,7 +9,7 @@
                     class="{{ $key == $selectedBracket ? "active" : "" }}"
                     href="{{ $key == $defaultBracket ? url()->current() : request()->fullUrlWithQuery([$bracketQueryKey => $key]) }}"
                 >
-                    {{ $key }}
+                    For {{ $key }}
                 </a>
             </li>
         @endforeach

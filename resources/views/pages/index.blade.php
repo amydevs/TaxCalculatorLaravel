@@ -72,6 +72,7 @@
                         <h3>{{ $key }}</h3>
                         @include('includes.index.table',  ['taxBrackets' => $aboutBracket])
                     @endforeach
+                    <p>More brackets can be found <a href="https://www.ato.gov.au/rates/individual-income-tax-rates/">here</a> (external site).</p>
                 </span>
             </div>
         </div>
