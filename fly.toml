@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for taxcalculatorlaravel-billowing-log-1827-bold-wave-851 on 2024-07-25T15:03:28+10:00
+# fly.toml app configuration file generated for autaxcalc on 2024-07-25T15:08:24+10:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'taxcalculatorlaravel-billowing-log-1827-bold-wave-851'
+app = 'autaxcalc'
 primary_region = 'syd'
 console_command = 'php /var/www/html/artisan tinker'
 
